@@ -1,0 +1,67 @@
+---
+layout: default.njk
+title: Trading site – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{{ govukRadios({
+  name: "trading-site-type",
+  classes: "govuk-!-width-two-thirds",
+  fieldset: {
+    legend: {
+      text: "Are you applying to trade at a fixed address, or are you a mobile trader?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "fixed",
+      text: "Fixed address",
+      attributes: {
+        "data-st8-key": "trading-site-type"
+      }
+    },
+    {
+      value: "mobile",
+      text: "Mobile trader",
+      attributes: {
+        "data-st8-key": "trading-site-type"
+      }
+    }
+  ]
+}) }}
+
+{# Only one of these buttons is shown at a time, depending on the selected radio #}
+{{ govukButton({
+  text: "Continue",
+  disabled: true,
+  attributes: {
+    "data-st8-key": "trading-site-type",
+    "data-st8-hide-if-set": true
+  }
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/fixed/postcode",
+  attributes: {
+    "data-st8-key": "trading-site-type",
+    "data-st8-show-if-value": "fixed"
+  }
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/mobile/parishes",
+  attributes: {
+    "data-st8-key": "trading-site-type",
+    "data-st8-show-if-value": "mobile"
+  }
+}) }}

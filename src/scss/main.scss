@@ -20,6 +20,7 @@ $color-societyworks-offwhite: #F7F6F5;
 @use "quick-actions";
 @use "card";
 @use "button-bar";
+@use "sticky-actions";
 @use "inline-inputs";
 
 .app-content {
@@ -82,6 +83,14 @@ img {
 
 .readable {
   max-width: 30em;
+}
+
+.pre-line {
+  white-space: pre-line;
+}
+
+.filter-hidden {
+  display: none !important;
 }
 
 .govuk-notification-banner--warning {

@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "Women’s Clothing",
+    "slug": "womens-clothing",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Women’s clothing including jeans (15+ years)",
+        "slug": "article-womens-clothing-a"
+      },
+      {
+        "letter": "b",
+        "text": "Women’s sportswear (15+ years)",
+        "slug": "article-womens-clothing-b"
+      },
+      {
+        "letter": "c",
+        "text": "Women’s coats/jackets",
+        "slug": "article-womens-clothing-c"
+      },
+      {
+        "letter": "d",
+        "text": "Adults’ hats, gloves, scarves",
+        "slug": "article-womens-clothing-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-womens-clothing-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Men’s Clothing",
+    "slug": "mens-clothing",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Men’s clothing including jeans (15+ years)",
+        "slug": "article-mens-clothing-a"
+      },
+      {
+        "letter": "b",
+        "text": "Men’s sportswear (15+ years)",
+        "slug": "article-mens-clothing-b"
+      },
+      {
+        "letter": "c",
+        "text": "Men’s coats/jackets",
+        "slug": "article-mens-clothing-c"
+      },
+      {
+        "letter": "d",
+        "text": "Adults’ hats, gloves, scarves",
+        "slug": "article-mens-clothing-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-mens-clothing-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Children/Baby Clothing",
+    "slug": "children-baby-clothing",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Children’s clothing (3 - 5 years)",
+        "slug": "article-children-baby-clothing-a"
+      },
+      {
+        "letter": "b",
+        "text": "Babywear including baby sportswear (0 - 36 months)",
+        "slug": "article-children-baby-clothing-b"
+      },
+      {
+        "letter": "c",
+        "text": "Baby/children’s coats/jackets",
+        "slug": "article-children-baby-clothing-c"
+      },
+      {
+        "letter": "d",
+        "text": "Baby/children’s hats, gloves, scarves, ties, belts",
+        "slug": "article-children-baby-clothing-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-children-baby-clothing-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Underwear/Nightwear",
+    "slug": "underwear-nightwear",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Women’s/girl’s underwear (bras, knickers, lingerie, socks, tights, stockings, knee highs, and thermals)",
+        "slug": "article-underwear-nightwear-a"
+      },
+      {
+        "letter": "b",
+        "text": "Men’s/boy’s underwear (vests, pants, socks, and thermals)",
+        "slug": "article-underwear-nightwear-b"
+      },
+      {
+        "letter": "c",
+        "text": "Baby/children’s underwear (knickers, socks, tights, and thermals)",
+        "slug": "article-underwear-nightwear-c"
+      },
+      {
+        "letter": "d",
+        "text": "Women’s/girl’s nightwear, dressing gowns, bathrobes",
+        "slug": "article-underwear-nightwear-d"
+      },
+      {
+        "letter": "e",
+        "text": "Men’s/boy’s nightwear, dressing gowns, bathrobes, pyjamas",
+        "slug": "article-underwear-nightwear-e"
+      },
+      {
+        "letter": "f",
+        "text": "Baby/children’s nightwear, dressing gowns, bathrobes, sleepsuits, pyjamas",
+        "slug": "article-underwear-nightwear-f"
+      },
+      {
+        "letter": "g",
+        "text": "Other (must be specified)",
+        "slug": "article-underwear-nightwear-g",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Footwear",
+    "slug": "footwear",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Women’s shoes, sandals, mules, boots, slippers, trainers",
+        "slug": "article-footwear-a"
+      },
+      {
+        "letter": "b",
+        "text": "Sports shoes",
+        "slug": "article-footwear-b"
+      },
+      {
+        "letter": "c",
+        "text": "Men’s shoes, boots, slippers, trainers, sports shoes",
+        "slug": "article-footwear-c"
+      },
+      {
+        "letter": "d",
+        "text": "Children’s shoes, slippers, trainers, sports shoes",
+        "slug": "article-footwear-d"
+      },
+      {
+        "letter": "e",
+        "text": "Women’s matching shoe/handbag sets",
+        "slug": "article-footwear-e"
+      },
+      {
+        "letter": "f",
+        "text": "Shoe repairs and key cutting service",
+        "slug": "article-footwear-f"
+      },
+      {
+        "letter": "g",
+        "text": "Accessories (in-soles, heel grips, shoe horns, protector, laces, polish, etc.)",
+        "slug": "article-footwear-g"
+      },
+      {
+        "letter": "h",
+        "text": "Other (must be specified)",
+        "slug": "article-footwear-h",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Food",
+    "slug": "food",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Pre-packed groceries",
+        "slug": "article-food-a"
+      },
+      {
+        "letter": "b",
+        "text": "Raw/uncooked meat or fish and eggs",
+        "slug": "article-food-b"
+      },
+      {
+        "letter": "c",
+        "text": "Fruit/vegetables and salads",
+        "slug": "article-food-c"
+      },
+      {
+        "letter": "d",
+        "text": "Dried fruit and pulses (peas, beans, seeds, nuts, raisins, dates, etc.)",
+        "slug": "article-food-d"
+      },
+      {
+        "letter": "e",
+        "text": "Pre-packed confectionery",
+        "slug": "article-food-e"
+      },
+      {
+        "letter": "f",
+        "text": "Pre-packed cheese, dairy products, eggs",
+        "slug": "article-food-f"
+      },
+      {
+        "letter": "g",
+        "text": "Deli food (unpacked cheese, olives, unpacked cold cooked/cured meat and fish, natural health foods, dips, salads)",
+        "slug": "article-food-g"
+      },
+      {
+        "letter": "h",
+        "text": "Hot or cold prepared/cooked food",
+        "slug": "article-food-h"
+      },
+      {
+        "letter": "i",
+        "text": "Hot or cold non-alcoholic beverages, smoothies, freshly pressed fruit juices",
+        "slug": "article-food-i"
+      },
+      {
+        "letter": "j",
+        "text": "Fresh and/or pre-packed ice cream",
+        "slug": "article-food-j"
+      },
+      {
+        "letter": "k",
+        "text": "Other (must be specified)",
+        "slug": "article-food-k",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Flowers",
+    "slug": "flowers",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Cut/uncut flowers and plants",
+        "slug": "article-flowers-a"
+      },
+      {
+        "letter": "b",
+        "text": "Artificial flowers",
+        "slug": "article-flowers-b"
+      },
+      {
+        "letter": "c",
+        "text": "Topiary",
+        "slug": "article-flowers-c"
+      },
+      {
+        "letter": "d",
+        "text": "Plant pots, bulbs, seeds, plant food",
+        "slug": "article-flowers-d"
+      },
+      {
+        "letter": "e",
+        "text": "Christmas trees, holly, mistletoe (seasonal)",
+        "slug": "article-flowers-e"
+      },
+      {
+        "letter": "f",
+        "text": "Other (must be specified)",
+        "slug": "article-flowers-f",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Household Goods/Toiletries",
+    "slug": "household-goods-toiletries",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Cleaning products, laundry products, washing products",
+        "slug": "article-household-goods-toiletries-a"
+      },
+      {
+        "letter": "b",
+        "text": "Cleaning utensils, storage containers, step ladders, etc.",
+        "slug": "article-household-goods-toiletries-b"
+      },
+      {
+        "letter": "c",
+        "text": "Light bulbs, plugs, multi-sockets, fuses",
+        "slug": "article-household-goods-toiletries-c"
+      },
+      {
+        "letter": "d",
+        "text": "Ornaments, vases, pictures, clocks, mirrors, candles, etc.",
+        "slug": "article-household-goods-toiletries-d"
+      },
+      {
+        "letter": "e",
+        "text": "Toiletries (toothpaste, soap, deodorant, hair remover, body lotion, shower gels, bath oils, etc.)",
+        "slug": "article-household-goods-toiletries-e"
+      },
+      {
+        "letter": "f",
+        "text": "Hair care (shampoo, conditioner, hair-dye, hair spray, perm/straightening products, hair mousse, grease, lotion, oil, etc.)",
+        "slug": "article-household-goods-toiletries-f"
+      },
+      {
+        "letter": "g",
+        "text": "Other (must be specified)",
+        "slug": "article-household-goods-toiletries-g",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Soft Furnishings",
+    "slug": "soft-furnishings",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Bedding, bed nets, blankets, mattress protectors",
+        "slug": "article-soft-furnishings-a"
+      },
+      {
+        "letter": "b",
+        "text": "Towels, bath mats, shower curtains, toilet seat covers",
+        "slug": "article-soft-furnishings-b"
+      },
+      {
+        "letter": "c",
+        "text": "Blinds, curtains, net curtains, curtain poles",
+        "slug": "article-soft-furnishings-c"
+      },
+      {
+        "letter": "d",
+        "text": "Duvets, pillows, pillow covers, cushions, cushion covers",
+        "slug": "article-soft-furnishings-d"
+      },
+      {
+        "letter": "e",
+        "text": "Carpets, floor mats, rugs, lino",
+        "slug": "article-soft-furnishings-e"
+      },
+      {
+        "letter": "f",
+        "text": "Tablecloths, furniture protectors, chair covers, etc.",
+        "slug": "article-soft-furnishings-f"
+      },
+      {
+        "letter": "g",
+        "text": "Other (must be specified)",
+        "slug": "article-soft-furnishings-g",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Kitchen/Dining",
+    "slug": "kitchen-dining",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Tableware, crockery, table mats",
+        "slug": "article-kitchen-dining-a"
+      },
+      {
+        "letter": "b",
+        "text": "Glassware, chinaware",
+        "slug": "article-kitchen-dining-b"
+      },
+      {
+        "letter": "c",
+        "text": "Kitchen utensils/plastics",
+        "slug": "article-kitchen-dining-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified and not electrical)",
+        "slug": "article-kitchen-dining-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Cosmetics",
+    "slug": "cosmetics",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Skin and body care products and hair-dyes",
+        "slug": "article-cosmetics-a"
+      },
+      {
+        "letter": "b",
+        "text": "Make-up and nail care products",
+        "slug": "article-cosmetics-b"
+      },
+      {
+        "letter": "c",
+        "text": "Perfume, cologne, aftershave, eau de toilette, shaving gel, creams",
+        "slug": "article-cosmetics-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified)",
+        "slug": "article-cosmetics-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Electrical",
+    "slug": "electrical",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Audio equipment and accessories",
+        "slug": "article-electrical-a"
+      },
+      {
+        "letter": "b",
+        "text": "Visual equipment and accessories",
+        "slug": "article-electrical-b"
+      },
+      {
+        "letter": "c",
+        "text": "Computer hardware and accessories",
+        "slug": "article-electrical-c"
+      },
+      {
+        "letter": "d",
+        "text": "Small kitchen appliances",
+        "slug": "article-electrical-d"
+      },
+      {
+        "letter": "e",
+        "text": "Landline telephones and accessories",
+        "slug": "article-electrical-e"
+      },
+      {
+        "letter": "f",
+        "text": "Cable/satellite TV services",
+        "slug": "article-electrical-f"
+      },
+      {
+        "letter": "g",
+        "text": "Small household or personal care electrical items",
+        "slug": "article-electrical-g"
+      },
+      {
+        "letter": "h",
+        "text": "Electrical repairs",
+        "slug": "article-electrical-h"
+      },
+      {
+        "letter": "i",
+        "text": "Other (must be specified)",
+        "slug": "article-electrical-i",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Mobile Phones",
+    "slug": "mobile-phones",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Mobile phones, mobile phone accessories",
+        "slug": "article-mobile-phones-a"
+      },
+      {
+        "letter": "b",
+        "text": "Phone cards, mobile phone repairs",
+        "slug": "article-mobile-phones-b"
+      },
+      {
+        "letter": "c",
+        "text": "Other (must be specified)",
+        "slug": "article-mobile-phones-c",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Jewellery and Accessories",
+    "slug": "jewellery-and-accessories",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Costume jewellery",
+        "slug": "article-jewellery-and-accessories-a"
+      },
+      {
+        "letter": "b",
+        "text": "Genuine hallmarked jewellery",
+        "slug": "article-jewellery-and-accessories-b"
+      },
+      {
+        "letter": "c",
+        "text": "Hair/head clips, bands, hair pins, head scarves, etc.",
+        "slug": "article-jewellery-and-accessories-c"
+      },
+      {
+        "letter": "d",
+        "text": "Watches, watch accessories, watch repairs",
+        "slug": "article-jewellery-and-accessories-d"
+      },
+      {
+        "letter": "e",
+        "text": "Sunglasses, reading glasses (including cases and neck bands)",
+        "slug": "article-jewellery-and-accessories-e"
+      },
+      {
+        "letter": "f",
+        "text": "Handbags, belts, wallets, purses, ties, cufflinks",
+        "slug": "article-jewellery-and-accessories-f"
+      },
+      {
+        "letter": "g",
+        "text": "Clocks, clock accessories, and repairs",
+        "slug": "article-jewellery-and-accessories-g"
+      },
+      {
+        "letter": "h",
+        "text": "Other (must be specified)",
+        "slug": "article-jewellery-and-accessories-h",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Travel Accessories",
+    "slug": "travel-accessories",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Luggage, sports bags, passport covers",
+        "slug": "article-travel-accessories-a"
+      },
+      {
+        "letter": "b",
+        "text": "Umbrellas, walking sticks",
+        "slug": "article-travel-accessories-b"
+      },
+      {
+        "letter": "c",
+        "text": "Other (must be specified)",
+        "slug": "article-travel-accessories-c",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Stationery",
+    "slug": "stationery",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Office supplies (paper, pens, files, etc.)",
+        "slug": "article-stationery-a"
+      },
+      {
+        "letter": "b",
+        "text": "Invitations, greeting cards, wrapping paper and gift bags/boxes, festive decorations, party bags",
+        "slug": "article-stationery-b"
+      },
+      {
+        "letter": "c",
+        "text": "Newspapers, periodicals, and magazines",
+        "slug": "article-stationery-c"
+      },
+      {
+        "letter": "d",
+        "text": "Reading and educational books",
+        "slug": "article-stationery-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-stationery-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Toys and Nursery Equipment",
+    "slug": "toys-and-nursery-equipment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Toys, soft toys, and dolls",
+        "slug": "article-toys-and-nursery-equipment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Board games, playing card games",
+        "slug": "article-toys-and-nursery-equipment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Games (not games consoles or cartridges or board games)",
+        "slug": "article-toys-and-nursery-equipment-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified)",
+        "slug": "article-toys-and-nursery-equipment-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Souvenirs",
+    "slug": "souvenirs",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Music memorabilia",
+        "slug": "article-souvenirs-a"
+      },
+      {
+        "letter": "b",
+        "text": "Sport memorabilia",
+        "slug": "article-souvenirs-b"
+      },
+      {
+        "letter": "c",
+        "text": "Ethnic memorabilia",
+        "slug": "article-souvenirs-c"
+      },
+      {
+        "letter": "d",
+        "text": "Local memorabilia",
+        "slug": "article-souvenirs-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-souvenirs-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Audio/Visual Entertainment",
+    "slug": "audio-visual-entertainment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Pre-recorded audio material, pre-recorded visual material",
+        "slug": "article-audio-visual-entertainment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Children’s pre-recorded visual material, Blu-ray",
+        "slug": "article-audio-visual-entertainment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Games consoles",
+        "slug": "article-audio-visual-entertainment-c"
+      },
+      {
+        "letter": "d",
+        "text": "Games cartridges for games consoles",
+        "slug": "article-audio-visual-entertainment-d"
+      },
+      {
+        "letter": "e",
+        "text": "Musical instruments (including acoustic and electric)",
+        "slug": "article-audio-visual-entertainment-e"
+      },
+      {
+        "letter": "f",
+        "text": "Other (must be specified)",
+        "slug": "article-audio-visual-entertainment-f",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Textiles",
+    "slug": "textiles",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Fabrics, laces, materials, yarn, wool",
+        "slug": "article-textiles-a"
+      },
+      {
+        "letter": "b",
+        "text": "Haberdashery (fastenings, facing, instant hem, thread, bobbins, etc.)",
+        "slug": "article-textiles-b"
+      },
+      {
+        "letter": "c",
+        "text": "Knitting, crochet, sewing needles",
+        "slug": "article-textiles-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified)",
+        "slug": "article-textiles-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Tools, DIY, and Gardening",
+    "slug": "tools-diy-and-gardening",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Small DIY tools, DIY gloves",
+        "slug": "article-tools-diy-and-gardening-a"
+      },
+      {
+        "letter": "b",
+        "text": "Small gardening tools, gardening gloves",
+        "slug": "article-tools-diy-and-gardening-b"
+      },
+      {
+        "letter": "c",
+        "text": "Other (must be specified)",
+        "slug": "article-tools-diy-and-gardening-c",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Bicycles and Outdoor Equipment",
+    "slug": "bicycles-and-outdoor-equipment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Bicycles and bicycle repairs",
+        "slug": "article-bicycles-and-outdoor-equipment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Scooters, skateboards, rollerskates",
+        "slug": "article-bicycles-and-outdoor-equipment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Bikes, motorcycle, and car parts/accessories",
+        "slug": "article-bicycles-and-outdoor-equipment-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified)",
+        "slug": "article-bicycles-and-outdoor-equipment-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Furniture and Antiques",
+    "slug": "furniture-and-antiques",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Small antique furniture",
+        "slug": "article-furniture-and-antiques-a"
+      },
+      {
+        "letter": "b",
+        "text": "Small non-furniture antiques",
+        "slug": "article-furniture-and-antiques-b"
+      },
+      {
+        "letter": "c",
+        "text": "Vintage bedroom/bathroom items",
+        "slug": "article-furniture-and-antiques-c"
+      },
+      {
+        "letter": "d",
+        "text": "Vintage kitchen/lounge items",
+        "slug": "article-furniture-and-antiques-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-furniture-and-antiques-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Baby Equipment",
+    "slug": "baby-equipment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Cots, prams, pushchairs, carry cots, slings",
+        "slug": "article-baby-equipment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Highchairs, bouncers, changing bags, baby monitors, safety gates, baby safe bottles",
+        "slug": "article-baby-equipment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Car seats, boosters, safety equipment, nursery furniture, walkers",
+        "slug": "article-baby-equipment-c"
+      },
+      {
+        "letter": "d",
+        "text": "Other (must be specified)",
+        "slug": "article-baby-equipment-d",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Photographic Equipment",
+    "slug": "photographic-equipment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Cameras, digital cameras, camcorders, photo printers",
+        "slug": "article-photographic-equipment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Peripherals and accessories (e.g. lenses, tripods, light meters, flash lights, film, photo paper, etc.)",
+        "slug": "article-photographic-equipment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Other (must be specified)",
+        "slug": "article-photographic-equipment-c",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Sports Equipment (Excluding Clothing, Trainers, and Bags)",
+    "slug": "sports-equipment-excluding-clothing-trainers-and-bags",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Bodybuilding/fitness equipment",
+        "slug": "article-sports-equipment-excluding-clothing-trainers-and-bags-a"
+      },
+      {
+        "letter": "b",
+        "text": "Football, cricket, rugby, netball, hockey accessories",
+        "slug": "article-sports-equipment-excluding-clothing-trainers-and-bags-b"
+      },
+      {
+        "letter": "c",
+        "text": "Tennis, badminton, squash, golf accessories",
+        "slug": "article-sports-equipment-excluding-clothing-trainers-and-bags-c"
+      },
+      {
+        "letter": "d",
+        "text": "Track and field accessories",
+        "slug": "article-sports-equipment-excluding-clothing-trainers-and-bags-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-sports-equipment-excluding-clothing-trainers-and-bags-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Pet Supplies and Equipment",
+    "slug": "pet-supplies-and-equipment",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Baskets, cages, hutches, aquarium, scratching poles, toys, accessories",
+        "slug": "article-pet-supplies-and-equipment-a"
+      },
+      {
+        "letter": "b",
+        "text": "Grooming and care (feeding bowls, brushes, shampoo, vitamins, tick and flea treatments, pet food)",
+        "slug": "article-pet-supplies-and-equipment-b"
+      },
+      {
+        "letter": "c",
+        "text": "Other (must be specified)",
+        "slug": "article-pet-supplies-and-equipment-c",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Second Hand Goods (Not Electrical)",
+    "slug": "second-hand-goods-not-electrical",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Clothing",
+        "slug": "article-second-hand-goods-not-electrical-a"
+      },
+      {
+        "letter": "b",
+        "text": "Vintage/recycled nightwear",
+        "slug": "article-second-hand-goods-not-electrical-b"
+      },
+      {
+        "letter": "c",
+        "text": "Vintage/recycled shoes, sandals, mules, boots, slippers, trainers, sports shoes",
+        "slug": "article-second-hand-goods-not-electrical-c"
+      },
+      {
+        "letter": "d",
+        "text": "Vintage/recycled clothing",
+        "slug": "article-second-hand-goods-not-electrical-d"
+      },
+      {
+        "letter": "e",
+        "text": "Second hand audio/visual equipment, DVDs, Blu-ray, videos",
+        "slug": "article-second-hand-goods-not-electrical-e"
+      },
+      {
+        "letter": "f",
+        "text": "Second hand reading and educational books",
+        "slug": "article-second-hand-goods-not-electrical-f"
+      },
+      {
+        "letter": "g",
+        "text": "Collectibles (coins, stamps, comics, porcelain dolls, etc.)",
+        "slug": "article-second-hand-goods-not-electrical-g"
+      },
+      {
+        "letter": "h",
+        "text": "Bric-a-brac, upcycled goods",
+        "slug": "article-second-hand-goods-not-electrical-h"
+      },
+      {
+        "letter": "i",
+        "text": "Other (must be specified)",
+        "slug": "article-second-hand-goods-not-electrical-i",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Arts and Crafts (Original/Handmade Goods)",
+    "slug": "arts-and-crafts-original-handmade-goods",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Art/Prints (paintings, sculpture, pottery, etc.)",
+        "slug": "article-arts-and-crafts-original-handmade-goods-a"
+      },
+      {
+        "letter": "b",
+        "text": "Keepsakes, commemorative items",
+        "slug": "article-arts-and-crafts-original-handmade-goods-b"
+      },
+      {
+        "letter": "c",
+        "text": "Face painting",
+        "slug": "article-arts-and-crafts-original-handmade-goods-c"
+      },
+      {
+        "letter": "d",
+        "text": "Handmade crafts",
+        "slug": "article-arts-and-crafts-original-handmade-goods-d"
+      },
+      {
+        "letter": "e",
+        "text": "Other (must be specified)",
+        "slug": "article-arts-and-crafts-original-handmade-goods-e",
+        "other": true
+      }
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "slug": "miscellaneous",
+    "items": [
+      {
+        "letter": "a",
+        "text": "Other not in any category above (must be specified)",
+        "slug": "article-miscellaneous-a",
+        "other": true
+      }
+    ]
+  }
+]

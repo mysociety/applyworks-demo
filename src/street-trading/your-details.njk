@@ -1,0 +1,70 @@
+---
+layout: default.njk
+title: Your details – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% call govukFieldset({
+  legend: {
+    text: "Your details",
+    classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6",
+    isPageHeading: true
+  },
+  classes: "govuk-!-width-one-half"
+}) %}
+
+  <p class="govuk-body readable govuk-!-margin-bottom-6">We’ll use these details to give you access to your Licensing Dashboard.</p>
+
+  {{ govukInput({
+    label: {
+      text: "Full name"
+    },
+    id: "name",
+    name: "name",
+    autocomplete: "name",
+    attributes: {
+      "data-st8-key": "user-name"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Email address"
+    },
+    id: "email",
+    name: "email",
+    type: "email",
+    autocomplete: "email",
+    spellcheck: false,
+    attributes: {
+      "data-st8-key": "user-email"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Phone number"
+    },
+    classes: "govuk-input--width-20",
+    id: "phone",
+    name: "phone",
+    type: "tel",
+    autocomplete: "tel",
+    attributes: {
+      "data-st8-key": "user-phone"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/verify-email"
+}) }}

@@ -1,0 +1,15 @@
+@use "govuk-frontend/dist/govuk" as *;
+
+.sticky-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 2; // in front of .govuk-checkboxes__input, which has z-index: 1
+    padding: govuk-spacing(7) 0 govuk-spacing(8) 0;
+    background-color: govuk-functional-colour(body-background);
+    margin-top: govuk-spacing(6);
+    border-top: 1px solid govuk-functional-colour(border);
+
+    .govuk-button {
+        margin-bottom: 0;
+    }
+}

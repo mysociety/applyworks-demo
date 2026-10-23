@@ -1,0 +1,44 @@
+---
+layout: default.njk
+title: Parishes – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% set parishItems = [] %}
+{% for parish in parishes | sort(false, false, "name") %}
+  {% set parishItems = (parishItems.push({
+    value: parish.name,
+    text: parish.name,
+    id: parish.slug,
+    attributes: {
+      "data-st8-key": parish.slug
+    }
+  }), parishItems) %}
+{% endfor %}
+
+{{ govukCheckboxes({
+  name: "parishes",
+  classes: "govuk-checkboxes--small",
+  fieldset: {
+    legend: {
+      text: "Where do you plan to trade?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "Please select all Parishes within which you plan to trade."
+  },
+  items: parishItems
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/mobile/vehicle"
+}) }}

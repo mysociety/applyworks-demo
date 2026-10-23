@@ -1,0 +1,28 @@
+---
+layout: default.njk
+title: Application submitted – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+      titleText: "Application submitted",
+      html: "Your reference number<br><strong>STL-2026-0412</strong>"
+    }) }}
+
+    <p class="govuk-body">We have sent a confirmation email to <strong data-st8-key="user-email">you</strong>.</p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">Your application will now be subject to a 28 day consultation period. The consultation period starts on the next working day after we received your full application.</p>
+
+    <p class="govuk-body">Remember to display the Public Notice we send you at your proposed trading location for the full 28 days, and until we have made a decision on your application.</p>
+
+    <p class="govuk-body">We will email you when there are updates on your application. You can also view the latest status of your application on your <a href="/dashboard" class="govuk-link">Licensing Dashboard</a>.</p>
+
+  </div>
+</div>

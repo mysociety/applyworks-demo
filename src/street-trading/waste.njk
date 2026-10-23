@@ -1,0 +1,50 @@
+---
+layout: default.njk
+title: Waste removal – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% call govukFieldset({
+  legend: {
+    text: "Waste removal and toilet facilities",
+    classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6",
+    isPageHeading: true
+  },
+  classes: "govuk-!-width-two-thirds"
+}) %}
+
+  {{ govukTextarea({
+    label: {
+      text: "Please detail your provision for removal of waste (including disposal of waste water)"
+    },
+    id: "waste-provision",
+    name: "waste-provision",
+    attributes: {
+      "data-st8-key": "waste-provision"
+    }
+  }) }}
+
+  {{ govukTextarea({
+    label: {
+      text: "Please describe your arrangements for access to toilet facilities"
+    },
+    id: "toilet-arrangements",
+    name: "toilet-arrangements",
+    attributes: {
+      "data-st8-key": "toilet-arrangements"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/licence-period"
+}) }}

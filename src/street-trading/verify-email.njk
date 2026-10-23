@@ -1,0 +1,34 @@
+---
+layout: default.njk
+title: Confirm your details – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+<h1 class="govuk-heading-l">Check your email</h1>
+
+<div class="govuk-body govuk-!-width-one-half">
+  <p class="govuk-body">We have sent an email to <strong data-st8-key="user-email">you</strong>.</p>
+  <p class="govuk-body">Please click the magic link in the email, or enter the token below, to confirm your details and continue with your application.</p>
+</div>
+
+{{ govukInput({
+  label: {
+    text: "Token"
+  },
+  classes: "govuk-input--width-10",
+  id: "token",
+  name: "token",
+  autocomplete: "one-time-code",
+  spellcheck: false
+}) }}
+
+{{ govukButton({
+  text: "Submit",
+  href: "/street-trading/applicant"
+}) }}

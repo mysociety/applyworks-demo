@@ -1,0 +1,41 @@
+---
+layout: default.njk
+title: Trading site address – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+<h1 class="govuk-heading-l">Find the trading site address</h1>
+
+{% set searchButtonHtml %}
+  {{ govukButton({
+    text: "Search",
+    href: "/street-trading/fixed/address"
+  }) }}
+{% endset %}
+
+{{ govukInput({
+  label: {
+    text: "Postcode"
+  },
+  classes: "govuk-input--width-10",
+  id: "site-postcode",
+  name: "site-postcode",
+  autocomplete: "postal-code",
+  inputWrapper: {
+    classes: "inline-inputs"
+  },
+  formGroup: {
+    afterInput: {
+      html: searchButtonHtml
+    }
+  },
+  attributes: {
+    "data-st8-key": "site-postcode"
+  }
+}) }}

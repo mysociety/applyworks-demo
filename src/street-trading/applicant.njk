@@ -1,0 +1,148 @@
+---
+layout: default.njk
+title: Applicant details – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-6">
+  Applicant: <span data-st8-key="user-name"></span>
+</h1>
+
+{% call govukFieldset({
+  legend: {
+    text: "Address",
+    classes: "govuk-fieldset__legend--m"
+  },
+  classes: "govuk-!-width-one-half"
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: "Address line 1"
+    },
+    id: "applicant-address-line-1",
+    name: "applicant-address-line-1",
+    autocomplete: "address-line1",
+    attributes: {
+      "data-st8-key": "applicant-address-line-1"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Address line 2 (optional)"
+    },
+    id: "applicant-address-line-2",
+    name: "applicant-address-line-2",
+    autocomplete: "address-line2",
+    attributes: {
+      "data-st8-key": "applicant-address-line-2"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Town or city"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "applicant-address-town",
+    name: "applicant-address-town",
+    autocomplete: "address-level2",
+    attributes: {
+      "data-st8-key": "applicant-address-town"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "County (optional)"
+    },
+    classes: "govuk-!-width-two-thirds",
+    id: "applicant-address-county",
+    name: "applicant-address-county",
+    attributes: {
+      "data-st8-key": "applicant-address-county"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Postcode"
+    },
+    classes: "govuk-input--width-10",
+    id: "applicant-postcode",
+    name: "applicant-postcode",
+    autocomplete: "postal-code",
+    attributes: {
+      "data-st8-key": "applicant-postcode"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukDateInput({
+  id: "applicant-dob",
+  namePrefix: "applicant-dob",
+  classes: "st8ify",
+  fieldset: {
+    legend: {
+      text: "Date of birth",
+      classes: "govuk-fieldset__legend--m"
+    },
+    classes: "govuk-!-margin-top-6"
+  },
+  hint: {
+    text: "For example, 27 3 1985"
+  }
+}) }}
+
+{{ govukFileUpload({
+  label: {
+    text: "Upload photo driving licence or passport",
+    classes: "govuk-label--m"
+  },
+  formGroup: {
+    classes: "govuk-!-margin-top-9"
+  },
+  wrapperClasses: "govuk-!-width-one-half",
+  id: "applicant-photo-id",
+  name: "applicant-photo-id",
+  javascript: true,
+  attributes: {
+    "data-file-key": "applicant-photo-id-file"
+  }
+}) }}
+
+{{ govukFileUpload({
+  label: {
+    text: "Upload proof of address issued within the last 3 months",
+    classes: "govuk-label--m"
+  },
+  hint: {
+    text: "For example, a utility bill, bank statement, or council tax bill"
+  },
+  formGroup: {
+    classes: "govuk-!-margin-top-9"
+  },
+  wrapperClasses: "govuk-!-width-one-half",
+  id: "applicant-proof-of-address",
+  name: "applicant-proof-of-address",
+  javascript: true,
+  attributes: {
+    "data-file-key": "applicant-proof-of-address-file"
+  }
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/right-to-work"
+}) }}

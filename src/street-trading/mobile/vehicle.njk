@@ -1,0 +1,58 @@
+---
+layout: default.njk
+title: Your vehicle – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% call govukFieldset({
+  legend: {
+    text: "Your vehicle",
+    classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6",
+    isPageHeading: true
+  },
+  classes: "govuk-!-width-two-thirds"
+}) %}
+
+  {{ govukInput({
+    label: {
+      text: "Vehicle registration number"
+    },
+    hint: {
+      text: "For example, CU57 ABC"
+    },
+    classes: "govuk-input--width-10 govuk-input--extra-letter-spacing",
+    id: "vehicle-registration",
+    name: "vehicle-registration",
+    spellcheck: false,
+    attributes: {
+      "data-st8-key": "vehicle-registration"
+    }
+  }) }}
+
+  {{ govukFileUpload({
+    label: {
+      text: "Photo of vehicle, showing any signage"
+    },
+    id: "vehicle-photos",
+    name: "vehicle-photos",
+    multiple: true,
+    javascript: true,
+    attributes: {
+      "data-file-key": "vehicle-photos-file"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/waste"
+}) }}

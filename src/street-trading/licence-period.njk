@@ -1,0 +1,64 @@
+---
+layout: default.njk
+title: Licence period – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% set otherPeriodHtml %}
+  {{ govukInput({
+    label: {
+      text: "What period do you want to trade for?"
+    },
+    hint: {
+      text: "For example, 1st June to 31st August"
+    },
+    id: "licence-period-other",
+    name: "licence-period-other",
+    attributes: {
+      "data-st8-key": "licence-period-other"
+    }
+  }) }}
+{% endset %}
+
+{{ govukRadios({
+  name: "licence-period",
+  classes: "govuk-!-width-two-thirds",
+  fieldset: {
+    legend: {
+      text: "Licence period",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "annual",
+      text: "Annual licence (1st April to 31st March)",
+      attributes: {
+        "data-st8-key": "licence-period"
+      }
+    },
+    {
+      value: "other",
+      text: "Other period",
+      conditional: {
+        html: otherPeriodHtml
+      },
+      attributes: {
+        "data-st8-key": "licence-period"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/trading-hours"
+}) }}

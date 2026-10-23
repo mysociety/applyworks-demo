@@ -1,0 +1,84 @@
+---
+layout: default.njk
+title: Right to work – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Applicant: <span data-st8-key="user-name"></span>
+</span>
+
+{% set niNumberHtml %}
+  {{ govukInput({
+    label: {
+      text: "National Insurance number"
+    },
+    classes: "govuk-input--width-10",
+    id: "applicant-ni-number",
+    name: "applicant-ni-number",
+    spellcheck: false,
+    attributes: {
+      "data-st8-key": "applicant-ni-number"
+    }
+  }) }}
+{% endset %}
+
+{% set eligibilityHtml %}
+  {{ govukFileUpload({
+    label: {
+      text: "Please upload proof of eligibility to work in the UK"
+    },
+    id: "applicant-right-to-work",
+    name: "applicant-right-to-work",
+    javascript: true,
+    attributes: {
+      "data-file-key": "applicant-right-to-work-file"
+    }
+  }) }}
+{% endset %}
+
+{{ govukRadios({
+  name: "applicant-has-ni",
+  classes: "govuk-!-width-two-thirds",
+  fieldset: {
+    legend: {
+      text: "Does this applicant have a National Insurance number?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  hint: {
+    text: "It will be on the applicant’s National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’."
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes",
+      conditional: {
+        html: niNumberHtml
+      },
+      attributes: {
+        "data-st8-key": "applicant-has-ni"
+      }
+    },
+    {
+      value: "no",
+      text: "No",
+      conditional: {
+        html: eligibilityHtml
+      },
+      attributes: {
+        "data-st8-key": "applicant-has-ni"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/current-consent"
+}) }}

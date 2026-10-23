@@ -1,0 +1,40 @@
+---
+layout: default.njk
+title: Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Apply for a street trading licence</h1>
+
+    <p class="govuk-body">You can use this service to apply for consent to trade from a fixed site, or as a mobile trader, in the borough.</p>
+
+    <p class="govuk-body">Before you start, you will need:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>personal details for all applicants, including proof of address and right to work</li>
+      <li>details of your trading site, including photographs of exteriors and signage</li>
+      <li>details of your trading hours and articles for sale</li>
+    </ul>
+
+    <h2 class="govuk-heading-m">What will happen after you apply</h2>
+
+    <p class="govuk-body">All new applications will be subject to a 28 day consultation period. The consultation period commences on the next working day following the receipt of the full application.</p>
+
+    <p class="govuk-body">Copies of your application will be referred for consultation purposes to other Council Departments, Ward Councillors, other local authorities and other agencies as appropriate.</p>
+
+    <p class="govuk-body">Details may also be passed to agents employed by the Council to carry out any professional assessment required and provide expert advice. Information may become public if your application is reported to the Council’s Licensing Committee or if your application or other information supplied is relevant to enforcement action taken by the Council. Where legally obliged by Court Order the Council may be required to disclose the information to third parties.</p>
+
+    {{ govukButton({
+      text: "Start",
+      href: "/street-trading/your-details",
+      classes: "govuk-!-margin-top-6",
+      isStartButton: true
+    }) }}
+
+  </div>
+</div>

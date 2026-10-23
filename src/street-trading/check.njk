@@ -1,0 +1,326 @@
+---
+layout: default.njk
+title: Check your answers – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% macro address(prefix, postcodeKey) %}
+  <div data-st8-key="{{ prefix }}-address-line-1"></div>
+  <div data-st8-key="{{ prefix }}-address-line-2"></div>
+  <div data-st8-key="{{ prefix }}-address-town"></div>
+  <div data-st8-key="{{ prefix }}-address-county"></div>
+  <div data-st8-key="{{ postcodeKey }}"></div>
+{% endmacro %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Check your answers before sending your application</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {% set rightToWorkHtml %}
+      <span data-st8-key="applicant-has-ni" data-st8-show-if-value="yes">
+        National Insurance number: <span data-st8-key="applicant-ni-number"></span>
+      </span>
+      <span data-st8-key="applicant-has-ni" data-st8-show-if-value="no">
+        Proof of eligibility to work in the UK: <span data-st8-key="applicant-right-to-work-file"></span>
+      </span>
+    {% endset %}
+
+    {% set currentConsentHtml %}
+      <p class="govuk-body"><span data-st8-key="current-consent"></span></p>
+      <div data-st8-key="current-consent" data-st8-show-if-set>
+        <p class="govuk-body pre-line" data-st8-key="current-consent" data-st8-hide-if-value="No, I have never had street trading consent in this borough"><span data-st8-key="current-consent-details"></span></p>
+      </div>
+    {% endset %}
+
+    {% set refusedConsentHtml %}
+      <p class="govuk-body"><span data-st8-key="refused-consent"></span></p>
+      <p class="govuk-body pre-line" data-st8-key="refused-consent" data-st8-show-if-value="Yes"><span data-st8-key="refused-consent-details"></span></p>
+    {% endset %}
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          html: 'Applicant: <span data-st8-key="user-name"></span>'
+        },
+        actions: {
+          items: [
+            {
+              href: "/street-trading/applicant",
+              text: "Change",
+              visuallyHiddenText: "applicant details"
+            }
+          ]
+        }
+      },
+      rows: [
+        {
+          key: { text: "Full name" },
+          value: { html: '<span data-st8-key="user-name"></span>' }
+        },
+        {
+          key: { text: "Email address" },
+          value: { html: '<span data-st8-key="user-email"></span>' }
+        },
+        {
+          key: { text: "Phone number" },
+          value: { html: '<span data-st8-key="user-phone"></span>' }
+        },
+        {
+          key: { text: "Address" },
+          value: { html: address("applicant", "applicant-postcode") }
+        },
+        {
+          key: { text: "Date of birth" },
+          value: { html: '<span class="js-applicant-dob"></span>' }
+        },
+        {
+          key: { text: "Photo ID" },
+          value: { html: '<span data-st8-key="applicant-photo-id-file"></span>' }
+        },
+        {
+          key: { text: "Proof of address" },
+          value: { html: '<span data-st8-key="applicant-proof-of-address-file"></span>' }
+        },
+        {
+          key: { text: "Right to work" },
+          value: { html: rightToWorkHtml }
+        },
+        {
+          key: { text: "Current or previous consent in this borough" },
+          value: { html: currentConsentHtml }
+        },
+        {
+          key: { text: "Previously refused consent" },
+          value: { html: refusedConsentHtml }
+        }
+      ]
+    }) }}
+
+    <div data-st8-key="trading-site-type" data-st8-show-if-value="fixed">
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Trading site"
+          },
+          actions: {
+            items: [
+              {
+                href: "/street-trading/trading-site",
+                text: "Change",
+                visuallyHiddenText: "trading site"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: { text: "Type of trader" },
+            value: { text: "Fixed address" }
+          },
+          {
+            key: { text: "Address" },
+            value: { html: address("site", "site-postcode") }
+          },
+          {
+            key: { text: "Description of stall or retail unit" },
+            value: { html: '<span class="pre-line" data-st8-key="stall-description"></span>' }
+          },
+          {
+            key: { text: "Dimensions" },
+            value: { html: '<span data-st8-key="stall-dimensions"></span>' }
+          },
+          {
+            key: { text: "Photos" },
+            value: { html: '<span data-st8-key="stall-photos-file"></span>' }
+          }
+        ]
+      }) }}
+    </div>
+
+    {% set parishesHtml %}
+      <ul class="govuk-list">
+        {% for parish in parishes | sort(false, false, "name") %}
+          <li data-st8-key="{{ parish.slug }}" data-st8-show-if-set>{{ parish.name }}</li>
+        {% endfor %}
+      </ul>
+    {% endset %}
+
+    <div data-st8-key="trading-site-type" data-st8-show-if-value="mobile">
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: "Trading site"
+          },
+          actions: {
+            items: [
+              {
+                href: "/street-trading/trading-site",
+                text: "Change",
+                visuallyHiddenText: "trading site"
+              }
+            ]
+          }
+        },
+        rows: [
+          {
+            key: { text: "Type of trader" },
+            value: { text: "Mobile trader" }
+          },
+          {
+            key: { text: "Parishes" },
+            value: { html: parishesHtml }
+          },
+          {
+            key: { text: "Vehicle registration number" },
+            value: { html: '<span data-st8-key="vehicle-registration"></span>' }
+          },
+          {
+            key: { text: "Photos" },
+            value: { html: '<span data-st8-key="vehicle-photos-file"></span>' }
+          }
+        ]
+      }) }}
+    </div>
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Waste removal and toilet facilities"
+        },
+        actions: {
+          items: [
+            {
+              href: "/street-trading/waste",
+              text: "Change",
+              visuallyHiddenText: "waste removal and toilet facilities"
+            }
+          ]
+        }
+      },
+      rows: [
+        {
+          key: { text: "Removal of waste" },
+          value: { html: '<span class="pre-line" data-st8-key="waste-provision"></span>' }
+        },
+        {
+          key: { text: "Toilet facilities" },
+          value: { html: '<span class="pre-line" data-st8-key="toilet-arrangements"></span>' }
+        }
+      ]
+    }) }}
+
+    {% set licencePeriodHtml %}
+      <span data-st8-key="licence-period" data-st8-show-if-value="annual">Annual licence (1st April to 31st March)</span>
+      <span data-st8-key="licence-period" data-st8-show-if-value="other"><span data-st8-key="licence-period-other"></span></span>
+    {% endset %}
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Licence period"
+        },
+        actions: {
+          items: [
+            {
+              href: "/street-trading/licence-period",
+              text: "Change",
+              visuallyHiddenText: "licence period"
+            }
+          ]
+        }
+      },
+      rows: [
+        {
+          key: { text: "Period" },
+          value: { html: licencePeriodHtml }
+        }
+      ]
+    }) }}
+
+    {% set tradingRows = [] %}
+    {% for day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] %}
+      {% set key = "hours-" + (day | lower) %}
+      {% set hoursHtml %}
+        <span data-st8-key="{{ key }}-start" data-st8-show-if-set><span data-st8-key="{{ key }}-start"></span> to <span data-st8-key="{{ key }}-end"></span></span>
+        <span data-st8-key="{{ key }}-start" data-st8-hide-if-set>Not trading</span>
+      {% endset %}
+      {% set tradingRows = (tradingRows.push({
+        key: { text: day },
+        value: { html: hoursHtml }
+      }), tradingRows) %}
+    {% endfor %}
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Trading period"
+        },
+        actions: {
+          items: [
+            {
+              href: "/street-trading/trading-hours",
+              text: "Change",
+              visuallyHiddenText: "trading period"
+            }
+          ]
+        }
+      },
+      rows: tradingRows
+    }) }}
+
+    {% set articlesHtml %}
+      {% for category in articles %}
+        <div class="js-hide-if-empty">
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-1">{{ category.name }}</h3>
+          <ul class="govuk-list govuk-list--bullet">
+            {% for article in category.items %}
+              <li data-st8-key="{{ article.slug }}" data-st8-show-if-set>
+                {{ article.text }}{% if article.other %}: <span data-st8-key="{{ article.slug }}-details"></span>{% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    {% endset %}
+
+    {{ govukSummaryList({
+      card: {
+        title: {
+          text: "Articles for sale"
+        },
+        actions: {
+          items: [
+            {
+              href: "/street-trading/articles",
+              text: "Change",
+              visuallyHiddenText: "articles for sale"
+            }
+          ]
+        }
+      },
+      rows: [
+        {
+          key: { text: "Articles" },
+          value: { html: articlesHtml }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m govuk-!-margin-top-9">Now send your application</h2>
+
+    <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+    {{ govukButton({
+      text: "Submit application",
+      href: "/street-trading/success"
+    }) }}
+
+  </div>
+</div>

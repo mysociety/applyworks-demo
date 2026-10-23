@@ -1,0 +1,61 @@
+---
+layout: default.njk
+title: Refused street trading consent – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Applicant: <span data-st8-key="user-name"></span>
+</span>
+
+{% set refusedDetailsHtml %}
+  {{ govukTextarea({
+    label: {
+      text: "Please provide details"
+    },
+    id: "refused-consent-details",
+    name: "refused-consent-details",
+    attributes: {
+      "data-st8-key": "refused-consent-details"
+    }
+  }) }}
+{% endset %}
+
+{{ govukRadios({
+  name: "refused-consent",
+  classes: "govuk-!-width-two-thirds",
+  fieldset: {
+    legend: {
+      text: "Have you previously been refused street trading consent in this or any other borough?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "Yes",
+      conditional: {
+        html: refusedDetailsHtml
+      },
+      attributes: {
+        "data-st8-key": "refused-consent"
+      }
+    },
+    {
+      value: "No",
+      text: "No",
+      attributes: {
+        "data-st8-key": "refused-consent"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/applicants"
+}) }}

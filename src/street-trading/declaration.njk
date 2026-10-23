@@ -1,0 +1,51 @@
+---
+layout: default.njk
+title: Declaration – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{{ govukCheckboxes({
+  name: "declaration",
+  classes: "govuk-!-width-two-thirds",
+  fieldset: {
+    legend: {
+      text: "Declaration",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6"
+    }
+  },
+  items: [
+    {
+      value: "correct",
+      text: "I declare that I/we have checked the information given on this application form and to the best of my/our knowledge and belief it is correct.",
+      attributes: {
+        "data-st8-key": "declaration-correct"
+      }
+    },
+    {
+      value: "conditions",
+      text: "I/we am/are aware of the Council’s Standard Conditions applicable to all Street Trading Consents and agree to comply with them.",
+      attributes: {
+        "data-st8-key": "declaration-conditions"
+      }
+    },
+    {
+      value: "public-notice",
+      text: "I understand that, upon submission of the application, I/we must affix the prescribed Public Notice (provided by the Council) in the proposed trading location, for a period of 28 days, and that this must remain in place until the application has been determined.",
+      attributes: {
+        "data-st8-key": "declaration-public-notice"
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/check"
+}) }}

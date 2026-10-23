@@ -1,0 +1,51 @@
+---
+layout: default.njk
+title: Applicants – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+<h1 class="govuk-heading-l">Applicants</h1>
+
+<p class="govuk-body readable">Everyone who will be trading under this licence must be included as an applicant.</p>
+
+{{ govukSummaryList({
+  classes: "govuk-!-width-two-thirds",
+  rows: [
+    {
+      key: {
+        html: '<span data-st8-key="user-name"></span>'
+      },
+      value: {
+        html: '<span data-st8-key="applicant-address-line-1"></span>, <span data-st8-key="applicant-postcode"></span>'
+      },
+      actions: {
+        items: [
+          {
+            href: "/street-trading/applicant",
+            text: "Change",
+            visuallyHiddenText: "applicant details"
+          }
+        ]
+      }
+    }
+  ]
+}) }}
+
+{{ govukButton({
+  text: "Add another applicant",
+  classes: "govuk-button--secondary"
+}) }}
+
+<div>
+  {{ govukButton({
+    text: "Continue",
+    href: "/street-trading/trading-site",
+    classes: "govuk-!-margin-top-6"
+  }) }}
+</div>

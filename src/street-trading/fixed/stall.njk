@@ -1,0 +1,69 @@
+---
+layout: default.njk
+title: Stall or retail unit – Apply for a street trading licence
+---
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  Apply for a street trading licence
+</span>
+
+{% call govukFieldset({
+  legend: {
+    text: "Your stall or retail unit",
+    classes: "govuk-fieldset__legend--l govuk-!-margin-bottom-6",
+    isPageHeading: true
+  },
+  classes: "govuk-!-width-two-thirds"
+}) %}
+
+  {{ govukTextarea({
+    label: {
+      text: "Description of stall or retail unit"
+    },
+    id: "stall-description",
+    name: "stall-description",
+    attributes: {
+      "data-st8-key": "stall-description"
+    }
+  }) }}
+
+  {{ govukInput({
+    label: {
+      text: "Dimensions of stall or retail unit"
+    },
+    hint: {
+      text: "For example, 3m × 2m"
+    },
+    classes: "govuk-input--width-20",
+    id: "stall-dimensions",
+    name: "stall-dimensions",
+    attributes: {
+      "data-st8-key": "stall-dimensions"
+    }
+  }) }}
+
+  {{ govukFileUpload({
+    label: {
+      text: "Photos of stall or retail unit, showing any signage"
+    },
+    id: "stall-photos",
+    name: "stall-photos",
+    multiple: true,
+    javascript: true,
+    attributes: {
+      "data-file-key": "stall-photos-file"
+    }
+  }) }}
+
+{% endcall %}
+
+{{ govukButton({
+  text: "Continue",
+  href: "/street-trading/waste"
+}) }}
