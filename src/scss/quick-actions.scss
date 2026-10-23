@@ -1,0 +1,16 @@
+@use "govuk-frontend/dist/govuk" as *;
+
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    @media #{govuk-from-breakpoint(tablet)} {
+        gap: 1.5rem;
+        flex-direction: row;
+    }
+
+    & > * {
+        flex: 1 1 0;
+    }
+}

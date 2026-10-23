@@ -1,0 +1,15 @@
+.inline-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    & > * {
+        margin: 0;
+    }
+
+    .govuk-input,
+    .govuk-select {
+        min-width: 3rem;
+    }
+}

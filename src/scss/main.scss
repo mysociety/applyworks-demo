@@ -1,0 +1,100 @@
+$color-societyworks-red: #DC1847;
+$color-societyworks-orange: #ED6C40;
+$color-societyworks-yellow: #FED876;
+$color-societyworks-green: #60BB99;
+$color-societyworks-blue: #0B72D1;
+$color-societyworks-offwhite: #F7F6F5;
+
+@use "govuk-frontend/dist/govuk" as * with (
+  $govuk-functional-colours: (
+    brand: $color-societyworks-blue,
+    link: $color-societyworks-blue,
+    error: $color-societyworks-red
+  ),
+  $govuk-font-family: (Lato, sans-serif),
+  $govuk-page-width: 1100px,
+  $govuk-assets-path: "../govuk/" // works with any Eleventy/GH Pages pathPrefix
+);
+
+@use "site-header";
+@use "quick-actions";
+@use "card";
+@use "button-bar";
+@use "inline-inputs";
+
+.app-content {
+  padding-bottom: $govuk-gutter;
+}
+
+.govuk-service-navigation__service-name {
+  width: 100%; // break nav links onto second line
+  @include govuk-font(
+    $size: 24,
+    $line-height: 1,
+    $weight: bold
+  );
+}
+
+// Pretty hacky rules here, to add space before account-related nav items.
+.govuk-service-navigation__item:has(a[href*="/help"]),
+.nav-staff .govuk-service-navigation__item:last-child {
+  margin-left: auto;
+}
+
+.govuk-table--align-middle {
+  .govuk-table__header,
+  .govuk-table__cell {
+    vertical-align: middle;
+  }
+}
+
+.govuk-table--with-action-column {
+  th:last-child, td:last-child {
+    width: 0;
+  }
+
+  .govuk-button {
+    white-space: nowrap;
+  }
+}
+
+.govuk-button--small {
+  @include govuk-font($size: 16, $line-height: 1);
+  padding: govuk-spacing(1);
+}
+
+// Make tags look less like buttons
+.govuk-tag {
+  font-size: 0.9em;
+  line-height: inherit;
+  border-radius: 0.25em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.width-0 {
+  width: 0 !important;
+}
+
+.readable {
+  max-width: 30em;
+}
+
+.govuk-notification-banner--warning {
+  border-color: $color-societyworks-red;
+  background-color: $color-societyworks-red;
+}
+
+.js-signed-in-navigation.hidden {
+  display: none;
+}
+
+.autocomplete__hint,
+.autocomplete__input,
+.autocomplete__menu {
+  @include govuk-font($size: 19);
+}

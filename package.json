@@ -1,0 +1,29 @@
+{
+  "name": "applyworks-demo",
+  "version": "1.0.0",
+  "description": "Static site built with Eleventy and GOV.UK Frontend",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass --load-path=node_modules src/scss/main.scss:_site/assets/css/main.css --style=compressed",
+    "build:eleventy": "eleventy",
+    "build:assets": "npm run copy:govuk-assets",
+    "build": "npm run build:sass && npm run build:assets && npm run build:eleventy",
+    "watch:sass": "sass --load-path=node_modules src/scss/main.scss:_site/assets/css/main.css --watch",
+    "watch:eleventy": "eleventy --serve",
+    "copy:govuk-assets": "mkdir -p _site/assets/js _site/assets/css && cp -r node_modules/govuk-frontend/dist/govuk/assets _site/assets/govuk && cp node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js _site/assets/js/ && cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.js _site/assets/js/ && cp node_modules/accessible-autocomplete/dist/accessible-autocomplete.min.css _site/assets/css/",
+    "start": "npm-run-all --parallel watch:sass watch:eleventy"
+  },
+  "keywords": [
+    "eleventy",
+    "govuk-frontend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "accessible-autocomplete": "^3.0.1",
+    "govuk-frontend": "^6.6.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.83.0"
+  }
+}

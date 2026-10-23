@@ -1,0 +1,22 @@
+---
+layout: staff.njk
+title: Applications
+---
+
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+<h1 class="govuk-heading-l">Applications</h1>
+
+{{ govukTable({
+  classes: "govuk-table--align-middle",
+  head: [
+    { text: "Reference" },
+    { text: "Type" },
+    { text: "Applicant" },
+    { text: "Received" },
+    { text: "Status" }
+  ],
+  rows: []
+}) }}
+
+<p class="govuk-body">No applications yet.</p>

@@ -1,0 +1,65 @@
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if title %}{{ title }} &ndash; {% endif %}{{ site.serviceName }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="govuk-width-container">
+        <a href="/" class="site-logo">Demo Authority</a>
+      </div>
+    </header>
+
+    {% set navItems = [
+      { href: "/dashboard", text: "Dashboard", section: "/dashboard" },
+      { href: "/applications", text: "Applications", section: "/applications" },
+      { href: "/help", text: "Help", section: "/help" },
+      { href: "/account", text: "Account", section: "/account" }
+    ] %}
+
+    {% set builtNav = [] %}
+    {% for item in navItems %}
+      {% if item.section and page.url.startsWith(item.section) %}
+        {% set builtNav = (builtNav.push({ href: item.href, text: item.text, active: true }), builtNav) %}
+      {% else %}
+        {% set builtNav = (builtNav.push({ href: item.href, text: item.text }), builtNav) %}
+      {% endif %}
+    {% endfor %}
+
+    {{ govukServiceNavigation({
+      serviceName: site.serviceName,
+      serviceUrl: "/",
+      navigation: builtNav,
+      navigationClasses: 'js-signed-in-navigation hidden'
+    }) }}
+
+    <div class="govuk-width-container">
+      <main class="govuk-main-wrapper" id="main-content" role="main">
+        {{ content | safe }}
+      </main>
+    </div>
+
+    <footer class="govuk-footer">
+      <div class="govuk-width-container">
+        A demo of ApplyWorks by <a href="https://www.societyworks.org/" class="govuk-link">SocietyWorks</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/js/jquery-4.0.0.slim.min.js"></script>
+    <script type="module" src="/assets/js/stateful.min.js"></script>
+    <script type="module" src="/assets/js/govuk-frontend.min.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+  </body>
+</html>

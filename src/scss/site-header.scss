@@ -1,0 +1,24 @@
+@use "govuk-frontend/dist/govuk" as *;
+
+$site-header-background: govuk-colour("black");
+$site-header-border-color: govuk-functional-colour(brand);
+$site-header-border-width: govuk-spacing(2);
+$site-header-color: govuk-colour("white");
+
+.site-header {
+    @include govuk-font($size: 16, $line-height: 1);
+    padding: govuk-spacing(3) 0;
+    border-bottom: $site-header-border-width solid $site-header-border-color;
+    background: $site-header-background;
+    color: $site-header-color;
+
+    a {
+        color: inherit;
+    }
+}
+
+.site-logo {
+    @include govuk-font($size: 27, $line-height: 1);
+    @include govuk-typography-weight-bold();
+    text-decoration: none;
+}

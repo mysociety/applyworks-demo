@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script/build: Build the static site for production.
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+echo "==> Building static site..."
+npm run build

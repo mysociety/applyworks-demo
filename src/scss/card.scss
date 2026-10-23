@@ -1,0 +1,37 @@
+@use "govuk-frontend/dist/govuk" as *;
+
+$card-padding: 1rem;
+
+.card {
+    --card-padding: 1rem;
+
+    position: relative;
+    padding: var(--card-padding, #{$card-padding});
+    border: 1px solid govuk-functional-colour(border);
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.card__title {
+    margin-bottom: 10px;
+}
+
+.card__stretched-link {
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.card__image {
+    display: block;
+    margin: calc(var(--card-padding, #{$card-padding}) * -1);
+    margin-bottom: var(--card-padding, #{$card-padding});
+    max-width: calc(100% + var(--card-padding, #{$card-padding}) + var(--card-padding, #{$card-padding}));
+}
