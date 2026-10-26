@@ -1,0 +1,57 @@
+---
+layout: default.njk
+title: Street trading licence STL-2026-0412
+---
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+{% from "govuk/components/tag/macro.njk" import govukTag %}
+
+{{ govukBackLink({
+  text: "Back to Dashboard",
+  href: "/dashboard",
+  classes: "govuk-!-margin-top-0 govuk-!-margin-bottom-6"
+}) }}
+
+<span class="govuk-caption-m govuk-!-margin-bottom-3">
+  STL-2026-0412
+</span>
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-6">Street trading licence application</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukSummaryList({
+      classes: "govuk-!-margin-bottom-9",
+      rows: [
+        {
+          key: { text: "Status" },
+          value: { html: govukTag({ text: "Under review", classes: "govuk-tag--blue" }) }
+        },
+        {
+          key: { text: "Reference" },
+          value: { text: "STL-2026-0412" }
+        },
+        {
+          key: { text: "Submitted" },
+          value: { html: '<span data-st8-key="street-trading-submitted-date"></span>' }
+        }
+      ]
+    }) }}
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">Your application is subject to a 28 day consultation period, which started on the next working day after we received it.</p>
+
+    <p class="govuk-body">Remember to display the Public Notice we sent you at your proposed trading location for the full 28 days, and until we have made a decision on your application.</p>
+
+    <p class="govuk-body govuk-!-margin-bottom-9">We will email you when there are updates on your application.</p>
+
+    <h2 class="govuk-heading-m">Your application</h2>
+
+    {% set showChangeLinks = false %}
+    {% include "street-trading-answers.njk" %}
+
+  </div>
+</div>

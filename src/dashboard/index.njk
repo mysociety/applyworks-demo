@@ -3,8 +3,42 @@ layout: default.njk
 title: Dashboard
 ---
 
+{% from "application-card.njk" import applicationCard %}
+
 <h1 class="govuk-heading-l govuk-!-margin-bottom-6">
   Welcome, <span data-st8-key="user-name">public user</span>
 </h1>
 
-<p class="govuk-body">TODO: Dashboard page content</p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+
+    <div class="govuk-!-margin-top-6" data-st8-key="street-trading-submitted-date" data-st8-show-if-set>
+      <h2 class="govuk-heading-m">Your applications</h2>
+      {{ applicationCard({
+        title: "Street trading licence",
+        href: "/dashboard/STL-2026-0412",
+        reference: "STL-2026-0412",
+        submittedHtml: '<span data-st8-key="street-trading-submitted-date"></span>',
+        tag: {
+          text: "Under review",
+          classes: "govuk-tag--blue"
+        }
+      }) }}
+    </div>
+
+    <div class="govuk-!-margin-top-8">
+      <h2 class="govuk-heading-m">Your licences</h2>
+      <p class="govuk-body">You do not have any licences yet.</p>
+    </div>
+
+    <div class="govuk-!-margin-top-8">
+      <h2 class="govuk-heading-m">Apply for a new licence</h2>
+      <ul class="govuk-list">
+        <li><a class="govuk-link" href="/street-trading/">Street trading licence</a></li>
+        <li><a class="govuk-link" href="#">Market stall licence</a></li>
+        <li><a class="govuk-link" href="#">Pavement licence</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>

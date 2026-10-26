@@ -64,6 +64,17 @@ var scenarios = {
     },
 };
 
+scenarios["street-trading-in-review"] = $.extend({}, scenarios["street-trading"], {
+    "signed-in": "true",
+    "applicant-has-ni": "yes",
+    "current-consent": "No, but I have previously had it",
+    "refused-consent": "No",
+    "declaration-correct": "correct",
+    "declaration-conditions": "conditions",
+    "declaration-public-notice": "public-notice",
+    "street-trading-submitted-date": "16th October 2026"
+});
+
 $('[data-start-scenario]').on('click', function(e){
     e.preventDefault();
     var url = $(this).attr('href');
@@ -207,4 +218,12 @@ $('[data-filter-target]').each(function(){
 $('.js-hide-if-empty').each(function(){
     var $items = $(this).find('[data-st8-show-if-set]');
     $(this).prop('hidden', $items.filter('[aria-hidden="false"]').length === 0);
+});
+
+// Record when the street trading application was submitted, so it shows up
+// on the dashboard. Submitting also signs the user in to their dashboard.
+$('.js-submit-street-trading').on('click', function(){
+    var now = new Date();
+    stateful.updateState('street-trading-submitted-date', dateFormat(now.getFullYear(), now.getMonth() + 1, now.getDate()));
+    stateful.updateState('signed-in', 'true');
 });

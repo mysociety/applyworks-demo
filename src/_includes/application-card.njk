@@ -1,0 +1,26 @@
+{% macro applicationCard(params) %}
+  {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+  {% from "govuk/components/tag/macro.njk" import govukTag %}
+
+  <div class="card">
+    <div class="card__header">
+      <h{{ params.headingLevel | default('3') }} class="card__title govuk-heading-s">
+        <a href="{{ params.href }}" class="card__stretched-link govuk-link">{{ params.title }}</a>
+      </h{{ params.headingLevel | default('3') }}>
+      {{ govukTag(params.tag) }}
+    </div>
+    {{ govukSummaryList({
+      classes: "govuk-summary-list--no-border card__details",
+      rows: [
+        {
+          key: { text: "Reference" },
+          value: { text: params.reference }
+        },
+        {
+          key: { text: "Submitted" },
+          value: { html: params.submittedHtml }
+        }
+      ]
+    }) }}
+  </div>
+{% endmacro %}
